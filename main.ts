@@ -33,6 +33,7 @@ export default class MyPlugin extends Plugin {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Accept': "*/*"
             },
             body: JSON.stringify({ msg: "hey" }),
             // body: JSON.stringify({ message: "hi" }),
@@ -43,7 +44,8 @@ export default class MyPlugin extends Plugin {
           }
   
           const result = await response.text();
-          this.showMessage(`Success: ${result}`);
+          // this.showMessage(`Success: ${result}`);
+          this.showMessage(`Success!`);
   
         } catch (error) {
           this.showMessage(`Error: ${error.message}`);
