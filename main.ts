@@ -27,6 +27,7 @@ export default class MyPlugin extends Plugin {
 			name: 'publish',
 			callback: async() => {
         this.showMessage("Publishing...");
+        this.showMessage("Publishing.sdfsdf..");
 
         try {
           const response = await fetch('http://localhost:3009/run-commands', {
